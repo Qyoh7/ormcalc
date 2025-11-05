@@ -36,25 +36,20 @@
 body {
     color: var(--text-muted);
     background-color: var(--bg);
-    align-items: center;
 }
 
 h1 {
-    color: var(text);
+    color: var(--text);
 }
 
 .userInput
 {
     align-content: center;
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
 }
 
-.userinput h1
-{
-    align-items: left;
-}
 
 button {
     background-color: var(--highlight);
@@ -64,7 +59,7 @@ button {
 }
 
 table {
-    border: white;
+    border: 1px solid var(--border);
 }
 
 input[type=number]

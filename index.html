@@ -2,18 +2,25 @@
 <html>
     <head>
         <title>Weight Calculator!</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
 
-    <h1>Percentage of one rep max calculator</h1>
     <body>
+        <h1>Percentage of one rep max calculator</h1>
+
         <div class='userInput'>
-            <h2>ORM</h2>
-            <h2>Percentage of ORM</h2>
-            <h2>Bar Weight</h2>
-                    
-            <input type='number' id='orm' >
-            <input type='number' id='percentage' >
-            <input type='number' id='barWeight' name='orm'>
+            <div class='ormInput'>
+                <p>ORM</p>
+                <input type='number' id='orm'>
+            </div>
+            <div class='percentageInput'> 
+                <p>Percentage of ORM</p>
+                <input type='number' id='percentage'>
+            </div>
+                <div class="barWeight">
+                <p>Bar Weight</p>
+                <input type='number' id='barWeight'>
+            </div>
         </div>
 
         <br>
@@ -44,6 +51,5 @@
     </body>
 
     <script src="js/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
 </html>
