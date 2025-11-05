@@ -6,29 +6,50 @@
 
     <h1>Percentage of one rep max calculator</h1>
     <body>
-        <input type='number' id='orm' name='orm'>ORM</input>
+        <div class='userInput'>
+            <table>
+                <tr>
+                <td>
+                <h2>ORM</h2>
+                </td>
+                <h2>Percentage of ORM</h2>
+                <h2>Bar Weight</h2>
+                </tr>
+            </table>
+                    
+            <input type='number' id='orm' >
+            <input type='number' id='percentage' >
+            <input type='number' id='barWeight' name='orm'>
+        </div>
+
         <br>
-        <input type='number' id='percentage' name='orm'>Percentage of ORM</input>
-        <br>
-        <input type='number' id='barWeight' name='orm'>Bar Weight</input>
-        <br>
-        <br>
-        <button id ='calculate'>Calculate</button>
-        <br>
-        <br>
-        
-        <a id='newWeight'>New weight: </a>
-        <br>
-        <a id='oneSide'>Total weight on one side: </a>
-        <br>
-        <a id='weights'>Weights on one side: </a>
-        <br>
-        <a id='remainder'>Remainder on one side: </a>
-        <br>
+        <button onclick='run()' id='calculate'>Calculate</button>
+
+        <div>
+            <table>
+                <tr>
+                    <td>New Weight</td>
+                    <td id='newWeight'></td>
+                </tr>
+                <tr>
+                    <td>One side weight: </td>
+                    <td id='oneSide'>  </td>
+                </tr>
+                <tr>
+                    <td>Weights on one side: </td>
+                    <td id='weights'>  </td>
+                </tr>
+                <tr>
+                    <td>Remainder</td>
+                    <td id='remainder'></td>
+                </tr>
+
+            </table>
+            <br>
+        </div>
     </body>
 
     <script src="js/script.js"></script>
-<style src="css/style.css"></style>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
 </html>

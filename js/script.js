@@ -37,7 +37,11 @@ function calcOrmPercentage(orm, percentage, barWeight)
     const oneSide = newWeight / 2;
     const oneSideWeights = determineWeights(oneSide);
 
-    return [newWeight, oneSide, oneSideWeights];
+    return {
+        WEIGHT: newWeight,
+        ONESIDE: oneSide,
+        ONESIDEWEIGHTS: oneSideWeights
+    }
 }
 
 function run()
@@ -45,26 +49,24 @@ function run()
     let orm = document.getElementById("orm").value; 
     let percentage = document.getElementById("percentage").value; 
     let barWeight = document.getElementById("barWeight").value; 
-    
+
     let result = calcOrmPercentage(orm, percentage, barWeight);
+    let weights = result.ONESIDEWEIGHTS;
 
-    let weights = result[2];
-
-    document.getElementById('newWeight').innerHTML += result[0];
-    document.getElementById('oneSide').innerHTML += result[1];
+    document.getElementById('newWeight').innerHTML = result.WEIGHT;
+    document.getElementById('oneSide').innerHTML = result.ONESIDE;
+    document.getElementById('weights').innerHTML = '';
 
     for (let i = 0; i < weights.length - 1; i++)
     {
         document.getElementById('weights').innerHTML += weights[i];
+
+        // Don't add comma at end
         if (i != weights.length - 2)
         {
             document.getElementById('weights').innerHTML += ", ";
         }
     }
-    document.getElementById("remainder").innerHTML += weights[weights.length - 1];
-}
 
-if (document.getElementById("calculate"))
-{
-    run()
+    document.getElementById("remainder").innerHTML = weights[weights.length - 1];
 }

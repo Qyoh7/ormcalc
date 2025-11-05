@@ -1,3 +1,98 @@
-input {
-    font-size: 100;
+:root {
+  /* hsl (fallback color) */
+  --bg-dark: hsl(234 100% 5%);
+  --bg: hsl(223 100% 7%);
+  --bg-light: hsl(215 99% 10%);
+  --text: hsl(214 100% 99%);
+  --text-muted: hsl(214 78% 73%);
+  --highlight: hsl(213 62% 41%);
+  --border: hsl(210 97% 28%);
+  --border-muted: hsl(212 100% 18%);
+  --primary: hsl(214 100% 74%);
+  --secondary: hsl(36 72% 58%);
+  --danger: hsl(8 68% 66%);
+  --warning: hsl(52 59% 44%);
+  --success: hsl(152 45% 49%);
+  --info: hsl(217 80% 68%);
+  /* oklch */
+  --bg-dark: oklch(0.1 0.065 255);
+  --bg: oklch(0.15 0.065 255);
+  --bg-light: oklch(0.2 0.065 255);
+  --text: oklch(0.96 0.1 255);
+  --text-muted: oklch(0.76 0.1 255);
+  --highlight: oklch(0.5 0.13 255);
+  --border: oklch(0.4 0.13 255);
+  --border-muted: oklch(0.3 0.13 255);
+  --primary: oklch(0.76 0.13 255);
+  --secondary: oklch(0.76 0.13 75);
+  --danger: oklch(0.7 0.13 30);
+  --warning: oklch(0.7 0.13 100);
+  --success: oklch(0.7 0.13 160);
+  --info: oklch(0.7 0.13 260);
+}
+body.light {
+  /* hsl (fallback color) */
+  --bg-dark: hsl(214 100% 93%);
+  --bg: hsl(214 100% 98%);
+  --bg-light: hsl(214 100% 100%);
+  --text: hsl(240 100% 12%);
+  --text-muted: hsl(210 97% 28%);
+  --highlight: hsl(214 100% 100%);
+  --border: hsl(213 57% 54%);
+  --border-muted: hsl(214 80% 66%);
+  --primary: hsl(210 97% 28%);
+  --secondary: hsl(38 100% 14%);
+  --danger: hsl(7 51% 41%);
+  --warning: hsl(53 100% 15%);
+  --success: hsl(161 100% 17%);
+  --info: hsl(217 54% 44%);
+  /* oklch */
+  --bg-dark: oklch(0.92 0.065 255);
+  --bg: oklch(0.96 0.065 255);
+  --bg-light: oklch(1 0.065 255);
+  --text: oklch(0.15 0.13 255);
+  --text-muted: oklch(0.4 0.13 255);
+  --highlight: oklch(1 0.13 255);
+  --border: oklch(0.6 0.13 255);
+  --border-muted: oklch(0.7 0.13 255);
+  --primary: oklch(0.4 0.13 255);
+  --secondary: oklch(0.4 0.13 75);
+  --danger: oklch(0.5 0.13 30);
+  --warning: oklch(0.5 0.13 100);
+  --success: oklch(0.5 0.13 160);
+  --info: oklch(0.5 0.13 260);
+}
+* {
+    font-family: "Noto Sans";
+    font-size: large;
+    background-color: var(--bg-dark);
+    color: var(--text);
+    align-items: center;
+}
+
+
+.userInput
+{
+    display: flex
+}
+
+
+button {
+    background-color: #abc7e9;
+    color: #1d1d1d;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+table {
+    border: white;
+}
+
+input[type=number]
+{
+    appearance: inherit;
+    border-radius: float;
+    -moz-appearance: textfield;
+    padding: 5px;
+    width: 10%;
 }
