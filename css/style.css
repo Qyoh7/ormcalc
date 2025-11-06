@@ -42,12 +42,18 @@ h1 {
     color: var(--text);
 }
 
-.userInput
+.user-input
 {
-    align-content: center;
+    justify-content: center;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     grid-template-rows: auto auto auto;
+}
+.input-row
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 
@@ -69,5 +75,4 @@ input[type=number]
     border-radius: float;
     border-color: var(--border);
     -moz-appearance: textfield;
-    width: 10%;
 }

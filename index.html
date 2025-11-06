@@ -5,50 +5,54 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
 
-    <body>
-        <h1>Percentage of one rep max calculator</h1>
+        <body>
+            <h1>Percentage of one rep max calculator</h1>
 
-        <div class='userInput'>
-            <div class='ormInput'>
-                <p>ORM</p>
-                <input type='number' id='orm'>
-            </div>
-            <div class='percentageInput'> 
-                <p>Percentage of ORM</p>
-                <input type='number' id='percentage'>
-            </div>
-                <div class="barWeight">
-                <p>Bar Weight</p>
-                <input type='number' id='barWeight'>
-            </div>
-        </div>
+            <main>
+            <section class='user-input'>
+                <form id='calculator'>
+                    <div class='input-row'>
+                        <label for='orm'>ORM</label>
+                        <input type='number' id='orm'>
+                    </div>
+                    <div class='input-row'> 
+                        <label for='percentage'>Percentage of ORM</label>
+                        <input type='number' id='percentage'>
+                    </div>
+                    <div class='input-row'>
+                        <label for='barWeight'>Bar Weight</label>
+                        <input type='number' id='barWeight'>
+                    </div>
+                </form>
+            </section>
 
-        <br>
-        <button onclick='run()' id='calculate'>Calculate</button>
-
-        <div>
-            <table>
-                <tr>
-                    <td>New Weight</td>
-                    <td id='newWeight'></td>
-                </tr>
-                <tr>
-                    <td>One side weight: </td>
-                    <td id='oneSide'>  </td>
-                </tr>
-                <tr>
-                    <td>Weights on one side: </td>
-                    <td id='weights'>  </td>
-                </tr>
-                <tr>
-                    <td>Remainder</td>
-                    <td id='remainder'></td>
-                </tr>
-
-            </table>
             <br>
-        </div>
-    </body>
+            <button onclick='run()' id='calculate'>Calculate</button>
+
+            <div>
+                <table>
+                    <tr>
+                        <td>New Weight</td>
+                        <td id='newWeight'></td>
+                    </tr>
+                    <tr>
+                        <td>One side weight: </td>
+                        <td id='oneSide'>  </td>
+                    </tr>
+                    <tr>
+                        <td>Weights on one side: </td>
+                        <td id='weights'>  </td>
+                    </tr>
+                    <tr>
+                        <td>Remainder</td>
+                        <td id='remainder'></td>
+                    </tr>
+
+                </table>
+                <br>
+            </div>
+            </main>
+        </body>
 
     <script src="js/script.js"></script>
 
