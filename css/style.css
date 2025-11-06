@@ -1,5 +1,4 @@
 :root {
-    font-family: "Noto Sans";
     /* hsl (fallback color) */
     --bg-dark: hsl(234 100% 5%);
     --bg: hsl(223 100% 7%);
@@ -34,8 +33,23 @@
 
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: start;
     color: var(--text-muted);
     background-color: var(--bg);
+    font-family: "Noto Sans";
+}
+main {
+    max-width: 100%;
+    width: 100%;
+    background: var(--bg-light);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
 }
 
 h1 {
@@ -49,6 +63,7 @@ h1 {
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
 }
+
 .input-row
 {
     display: flex;
@@ -58,21 +73,42 @@ h1 {
 
 
 button {
-    background-color: var(--highlight);
-    color: var(--text);
-    border-radius: 5px;
-    border-color: transparent;
+  background: var(--highlight);
+  color: var(--text);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  width: 100%;
+  font-weight: 600;
+}
+button:hover {
+  border-bottom: 5rem;
+  color: var(--text)
+}
+button:active {
+  transform: scale(0.97);
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
-table {
+table, th, td {
     border: 1px solid var(--border);
+    border-collapse: collapse;
+    padding: 5px
 }
 
 input[type=number]
 {
     display: grid;
-    appearance: inherit;
+    padding: 5px;
     border-radius: float;
-    border-color: var(--border);
+    border-color: var(--bg-light);
+    color: var(--text);
     -moz-appearance: textfield;
+    background: var(--bg);
 }
