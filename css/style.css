@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 :root {
     /* hsl (fallback color) */
     --bg-dark: hsl(234 100% 5%);
@@ -33,12 +34,13 @@
 
 
 body {
+    font-size: 1.5rem;
+    font-family: 'Manrope', sans-serif;
     display: flex;
     justify-content: center;
     align-items: start;
     color: var(--text-muted);
     background-color: var(--bg);
-    font-family: "Noto Sans";
 }
 main {
     max-width: 100%;
@@ -116,6 +118,7 @@ table, tr, td {
 input[type=number]
 {
     display: grid;
+    font-size: 1.5rem;
     padding: 5px;
     border-radius: float;
     border-color: var(--bg-light);
